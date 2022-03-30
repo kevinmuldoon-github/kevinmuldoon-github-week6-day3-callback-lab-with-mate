@@ -62,7 +62,7 @@ describe('Cinema', function () {
 
   it('Cinema should be able to filter films by year', function (){
     const actual = cinema.filmsByProperty('genre', 'drama');
-    assert.deepEqual(actual, [moonlight, trainspotting]);
+    assert.deepStrictEqual(actual, [moonlight, trainspotting]);
   });
 
 });

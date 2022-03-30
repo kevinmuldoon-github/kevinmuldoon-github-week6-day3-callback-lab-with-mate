@@ -55,12 +55,23 @@ Cinema.prototype.totalFilm = function (){
 }
 
 
+// Cinema.prototype.filmsByProperty = function (property, value)
+//   // let filmKeys = object.keys(this.films);
+//   const result = this.films.filter((film) => {
+//     return  film.property == value;
+//   });
+//   return result;
+
+
+
 Cinema.prototype.filmsByProperty = function (property, value){
-  // let filmKeys = object.keys(this.films);
   const result = this.films.filter((film) => {
-    return  film.property == value;
+    return  film[property] === value;
   });
   return result;
-}
+};
+
+module.exports = Cinema;
+
 
 module.exports = Cinema;
