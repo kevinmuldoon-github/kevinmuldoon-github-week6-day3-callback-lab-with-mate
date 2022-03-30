@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { generateKey } = require('crypto');
 const Cinema = require('../models/cinema.js');
 const Film = require('../models/film.js');
 
@@ -55,8 +56,13 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, false);
   });
   it('should be able to calculate total running time of all films', function (){
-    const actual =cinema.totalFilm();
+    const actual = cinema.totalFilm();
     assert.deepStrictEqual(actual,  622);
+  });
+
+  it('Cinema should be able to filter films by year', function (){
+    const actual = cinema.filmsByProperty('genre', 'drama');
+    assert.deepEqual(actual, [moonlight, trainspotting]);
   });
 
 });
