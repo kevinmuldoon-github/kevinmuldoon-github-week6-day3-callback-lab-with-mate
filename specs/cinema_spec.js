@@ -46,7 +46,10 @@ describe('Cinema', function () {
     const actual = cinema.filmByYear(2018);
     assert.deepStrictEqual(actual, [blackPanther]);
   });
-  it('should be able to check whether there are no films from a particular year');
+  it('should be able to check whether there are no films from a particular year', function (){
+    const actual = cinema.noFilms(2022);
+    assert.deepStrictEqual(actual, false);
+  });
   it('should be able to check whether all films are over a particular length');
   it('should be able to calculate total running time of all films');
 

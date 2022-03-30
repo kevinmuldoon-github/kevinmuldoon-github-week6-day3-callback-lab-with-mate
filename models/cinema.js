@@ -33,6 +33,13 @@ Cinema.prototype.filmByYear = function (filmYear){
   return result;
 }
 
+Cinema.prototype.noFilms = function (filmYear){
+  const result = this.films.every((film) => {
+    return film.year == filmYear;
+  })
+  return result;
+}
+
 
 
 
