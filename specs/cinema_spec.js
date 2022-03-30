@@ -54,6 +54,9 @@ describe('Cinema', function () {
     const actual = cinema.filmOverLength(130);
     assert.deepStrictEqual(actual, false);
   });
-  it('should be able to calculate total running time of all films');
+  it('should be able to calculate total running time of all films', function (){
+    const actual =cinema.totalFilm();
+    assert.deepStrictEqual(actual,  622);
+  });
 
 });
