@@ -40,7 +40,11 @@ Cinema.prototype.noFilms = function (filmYear){
   return result;
 }
 
-
-
+Cinema.prototype.filmOverLength = function (filmLength){
+  const result = this.films.every((film) => {
+    return film.length >= filmLength;
+  })
+  return result;
+}
 
 module.exports = Cinema;
